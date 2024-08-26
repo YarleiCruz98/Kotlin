@@ -1,0 +1,260 @@
+var name: String = "John" // String
+val birthyear: Int = 1975 // Int
+var name: String
+name = "John"
+println(name)
+
+
+
+val myNum: Int = 5                // Int
+val myDoubleNum: Double = 5.99    // Double
+val myLetter: Char = 'D'          // Char
+val myBoolean: Boolean = true     // Boolean
+val myText: String = "Hello"      // String
+
+
+val isKotlinFun: Boolean = true
+val isFishTasty: Boolean = false
+println(isKotlinFun)   // Outputs true
+println(isFishTasty)   // Outputs false
+
+val myGrade: Char = 'B'
+println(myGrade)
+
+--------------------------
+
+To convert a numeric data type to another type, you must use one of the following functions: toByte(), toShort(), toInt(), toLong(), toFloat(), toDouble() or toChar():
+val x: Int = 5
+val y: Long = x.toLong()
+println(y)
+
++	Addition	Adds together two values	x + y
+-	Subtraction	Subtracts one value from another	x - y
+*	Multiplication	Multiplies two values	x * y
+/	Division	Divides one value from another	x / y
+%	Modulus	Returns the division remainder	x % y
+++	Increment	Increases the value by 1	++x
+--	Decrement	Decreases the value by 1	--x
+
+------------------------
+
+1. Length
+Descrição: Retorna o número de caracteres em uma string.
+Exemplo:
+kotlin
+Copiar código
+val text = "Hello, Kotlin!"
+println(text.length)  // Output: 14
+
+2. Substring
+Descrição: Extrai uma parte da string com base nos índices de início e fim.
+Exemplo:
+kotlin
+Copiar código
+val text = "Hello, Kotlin!"
+val sub = text.substring(7, 13)
+println(sub)  // Output: Kotlin
+
+3. Replace
+Descrição: Substitui todas as ocorrências de um caractere ou substring por outro.
+Exemplo:
+kotlin
+Copiar código
+val text = "Kotlin is great"
+val replaced = text.replace("great", "awesome")
+println(replaced)  // Output: Kotlin is awesome
+
+4. Contains
+Descrição: Verifica se uma string contém uma determinada substring.
+Exemplo:
+kotlin
+Copiar código
+val text = "Hello, Kotlin!"
+val result = text.contains("Kotlin")
+println(result)  // Output: true
+
+5. StartsWith / EndsWith
+Descrição: Verifica se uma string começa ou termina com uma determinada substring.
+Exemplo:
+kotlin
+Copiar código
+val text = "Hello, Kotlin!"
+println(text.startsWith("Hello"))  // Output: true
+println(text.endsWith("Kotlin!"))  // Output: true
+
+6. ToUpperCase / ToLowerCase
+Descrição: Converte todos os caracteres de uma string para maiúsculas ou minúsculas.
+Exemplo:
+kotlin
+Copiar código
+val text = "Hello, Kotlin!"
+println(text.toUpperCase())  // Output: HELLO, KOTLIN!
+println(text.toLowerCase())  // Output: hello, kotlin!
+
+7. Trim
+Descrição: Remove espaços em branco do início e do final de uma string.
+Exemplo:
+kotlin
+Copiar código
+val text = "   Kotlin   "
+println(text.trim())  // Output: Kotlin
+
+8. Split
+Descrição: Divide uma string em partes, com base em um delimitador, e retorna uma lista das partes.
+Exemplo:
+kotlin
+Copiar código
+val text = "Kotlin,Java,Python"
+val languages = text.split(",")
+println(languages)  // Output: [Kotlin, Java, Python]
+
+9. JoinToString
+Descrição: Combina uma coleção de elementos em uma única string, com um separador entre eles.
+Exemplo:
+kotlin
+Copiar código
+val languages = listOf("Kotlin", "Java", "Python")
+val result = languages.joinToString(", ")
+println(result)  // Output: Kotlin, Java, Python
+
+10. IndexOf / LastIndexOf
+Descrição: Retorna o índice da primeira ou última ocorrência de uma substring dentro da string.
+Exemplo:
+kotlin
+Copiar código
+val text = "Hello, Kotlin!"
+println(text.indexOf("Kotlin"))  // Output: 7
+println(text.lastIndexOf("o"))   // Output: 8
+
+11. Reversed
+Descrição: Retorna uma nova string que é a inversão da string original.
+Exemplo:
+kotlin
+Copiar código
+val text = "Kotlin"
+println(text.reversed())  // Output: niltoK
+
+12. CompareTo
+Descrição: Compara duas strings lexicograficamente.
+Exemplo:
+kotlin
+Copiar código
+val text1 = "Kotlin"
+val text2 = "Java"
+println(text1.compareTo(text2))  // Output: 1 (Kotlin é maior lexicograficamente que Java)
+
+13. IsEmpty / IsBlank
+Descrição: Verifica se uma string está vazia (isEmpty) ou contém apenas espaços em branco (isBlank).
+Exemplo:
+kotlin
+Copiar código
+val emptyText = ""
+val blankText = "   "
+println(emptyText.isEmpty())  // Output: true
+println(blankText.isBlank())  // Output: true
+
+14. Format
+Descrição: Formata uma string com placeholders, similar ao printf em outras linguagens.
+Exemplo:
+kotlin
+Copiar código
+val name = "Kotlin"
+val version = 1.5
+val text = "Language: %s, Version: %.1f".format(name, version)
+println(text)  // Output: Language: Kotlin, Version: 1.5
+
+15. Take / Drop
+Descrição: take(n) retorna os primeiros n caracteres; drop(n) descarta os primeiros n caracteres e retorna o restante.
+Exemplo:
+kotlin
+Copiar código
+val text = "Hello, Kotlin!"
+println(text.take(5))  // Output: Hello
+println(text.drop(7))  // Output: Kotlin!
+
+-----
+
+val day = 4
+
+val result = when (day) {
+  1 -> "Monday"
+  2 -> "Tuesday"
+  3 -> "Wednesday"
+  4 -> "Thursday"
+  5 -> "Friday"
+  6 -> "Saturday"
+  7 -> "Sunday"
+  else -> "Invalid day."
+}
+println(result)
+
+// Outputs "Thursday" (day 4)
+
+----------
+
+var i = 0
+do {
+  println(i)
+  i++
+  }
+while (i < 5)
+
+-------------------------
+
+Kotlin Break
+The break statement is used to jump out of a loop.
+
+This example jumps out of the loop when i is equal to 4:
+
+Example
+var i = 0
+while (i < 10) {
+  println(i)
+  i++
+  if (i == 4) {
+    break
+  }
+}
+
+------------------------
+
+Kotlin Continue
+The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+This example skips the value of 4:
+
+Example
+var i = 0
+while (i < 10) {
+  if (i == 4) {
+    i++
+    continue
+  }
+  println(i)
+  i++
+}
+
+--------------------------------------
+
+Check if an Element Exists
+You can use the in operator to check if an element exists in an array:
+
+Example
+val cars = arrayOf("Volvo", "BMW", "Ford", "Mazda")
+if ("Volvo" in cars) {
+  println("It exists!")
+} else {
+  println("It does not exist.")
+}
+Loop Through an Array
+Often when you work with arrays, you need to loop through all of the elements.
+
+You can loop through the array elements with the for loop, which you will learn even more about in the next chapter.
+
+The following example outputs all elements in the cars array:
+
+Example
+val cars = arrayOf("Volvo", "BMW", "Ford", "Mazda")
+for (x in cars) {
+  println(x)
+}
