@@ -1,5 +1,8 @@
+//Implementar um programa que o usuário informe via linha de comando um valor do
+//produto e um percentual de desconto. Com base nisso apresente o valor final do
+//produto. Criar uma função para esse cálculo.
+
 import java.util.Scanner
-val scanner = Scanner(System.`in`)
 
 fun main(){
     val valorFinal = calculaDesconto(preco(),desconto())
